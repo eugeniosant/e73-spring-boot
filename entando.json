@@ -1,35 +1,50 @@
 {
-    "microservices": [
+  "microservices": [
+    {
+      "name": "e71-spring-boot-ms",
+      "stack": "spring-boot",
+      "healthCheckPath": "/api/health"
+    }
+  ],
+  "microfrontends": [
+    {
+      "name": "simple-mfe",
+      "customElement": "simple-mfe",
+      "stack": "react",
+      "type": "widget",
+      "group": "free",
+      "publicFolder": "public",
+      "titles": {
+        "en": "E71 Simple MFE",
+        "it": "E71 Simple MFE"
+      },
+      "apiClaims": [
         {
-            "name": "e71-spring-boot-ms",
-            "stack": "spring-boot",
-            "healthCheckPath": "/api/health"
+          "name": "be-api",
+          "type": "internal",
+          "serviceName": "e71-spring-boot-ms"
         }
-    ],
-    "microfrontends": [
+      ],
+      "configMfe": "simple-mfe-config",
+      "params": [
         {
-            "name": "simple-mfe",
-            "customElement": "simple-mfe",
-            "stack": "react",
-            "type": "widget",
-            "group": "free",
-            "publicFolder": "public",
-            "titles": {
-                "en": "E71 Simple MFE",
-                "it": "E71 Simple MFE"
-            },
-            "apiClaims": [
-                {
-                    "name": "be-api",
-                    "type": "internal",
-                    "serviceName": "e71-spring-boot-ms"
-                }
-            ]
+          "name": "buttonlabel",
+          "description": "my new button label"
         }
-    ],
-    "svc": [],
-    "name": "e71-spring-boot",
-    "version": "0.0.3",
-    "description": "e71-react-widget description",
-    "type": "bundle"
+      ]
+    },
+    {
+      "name": "simple-mfe-config",
+      "customElement": "simple-mfe-config",
+      "stack": "react",
+      "type": "widget-config",
+      "group": "free",
+      "publicFolder": "public"
+    }
+  ],
+  "svc": [],
+  "name": "e71-spring-boot",
+  "version": "0.0.4",
+  "description": "e71-react-widget description",
+  "type": "bundle"
 }

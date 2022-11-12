@@ -7,6 +7,8 @@ function App({config}) {
     const {systemParams} = config || {};
     const { api } = systemParams || {};
     const url = api && api["be-api"].url
+    const { params } = config || {};
+    const { buttonlabel } = params || {};
 
     const [payload, setPayload] = useState("")
 
@@ -28,7 +30,7 @@ function App({config}) {
     return (
     <div className="App">
       <div>
-        <button onClick={callTheApi}>Call the API</button>
+        <button onClick={callTheApi}>{buttonlabel}</button>
       </div>
       <div>
         <span>{payload}</span>

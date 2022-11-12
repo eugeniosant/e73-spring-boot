@@ -5,5 +5,8 @@
                 "url": "http://localhost:8081"
             }
         }
+    },
+    "params": {
+        "buttonlabel": "my new button label"
     }
 }
