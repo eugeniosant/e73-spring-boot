@@ -27,6 +27,17 @@
     <title>React App</title>
   </head>
   <body>
-  <simple-mfe />
+  <simple-mfe/>
+  <script>
+   function injectConfigIntoMfe() {
+     fetch('%PUBLIC_URL%/mfe-config.json').then(async response => {
+       const config = await response.text()
+       const mfeEl = document.getElementsByTagName('simple-mfe')[0]
+       mfeEl.setAttribute('config', config)
+     })
+   } 
+   injectConfigIntoMfe()
+  </script>
+
   </body>
 </html>

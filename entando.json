@@ -17,12 +17,19 @@
             "titles": {
                 "en": "E71 Simple MFE",
                 "it": "E71 Simple MFE"
-            }
+            },
+            "apiClaims": [
+                {
+                    "name": "be-api",
+                    "type": "internal",
+                    "serviceName": "e71-spring-boot-ms"
+                }
+            ]
         }
     ],
     "svc": [],
     "name": "e71-spring-boot",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "e71-react-widget description",
     "type": "bundle"
 }

@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import {useState} from "react";
 import './App.css';
 
-function App() {
-  return (
+const API_PATH = '/api/example'
+
+function App({config}) {
+    const {systemParams} = config || {};
+    const { api } = systemParams || {};
+    const url = api && api["be-api"].url
+
+    const [payload, setPayload] = useState("")
+
+    async function callTheApi() {
+        try {
+            const apiResponse = await fetch(url + API_PATH);
+
+            if (apiResponse.ok) {
+                const apiJson = await apiResponse.json();
+                setPayload(<>{apiJson.payload}<br/></>);
+            } else {
+                setPayload('Server responded with an error');
+            }
+        } catch (error) {
+            setPayload(error.message);
+        }
+    }
+
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <button onClick={callTheApi}>Call the API</button>
+      </div>
+      <div>
+        <span>{payload}</span>
+      </div>
     </div>
   );
 }

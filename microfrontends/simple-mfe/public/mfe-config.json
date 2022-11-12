@@ -1,0 +1,9 @@
+{
+    "systemParams": {
+        "api": {
+            "be-api": {
+                "url": "http://localhost:8081"
+            }
+        }
+    }
+}
