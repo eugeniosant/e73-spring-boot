@@ -1,50 +1,53 @@
 {
-  "microservices": [
-    {
-      "name": "e71-spring-boot-ms",
-      "stack": "spring-boot",
-      "healthCheckPath": "/api/health"
-    }
-  ],
-  "microfrontends": [
-    {
-      "name": "simple-mfe",
-      "customElement": "simple-mfe",
-      "stack": "react",
-      "type": "widget",
-      "group": "free",
-      "publicFolder": "public",
-      "titles": {
-        "en": "E71 Simple MFE",
-        "it": "E71 Simple MFE"
-      },
-      "apiClaims": [
+    "microservices": [
         {
-          "name": "be-api",
-          "type": "internal",
-          "serviceName": "e71-spring-boot-ms"
+            "name": "e71-spring-boot-ms",
+            "stack": "spring-boot",
+            "healthCheckPath": "/api/health",
+            "roles": ["role1"]
         }
-      ],
-      "configMfe": "simple-mfe-config",
-      "params": [
+    ],
+    "microfrontends": [
         {
-          "name": "buttonlabel",
-          "description": "my new button label"
+            "name": "simple-mfe",
+            "customElement": "simple-mfe",
+            "stack": "react",
+            "type": "widget",
+            "group": "free",
+            "publicFolder": "public",
+            "titles": {
+                "en": "E71 Simple MFE",
+                "it": "E71 Simple MFE"
+            },
+            "apiClaims": [
+                {
+                    "name": "be-api",
+                    "type": "internal",
+                    "serviceName": "e71-spring-boot-ms"
+                }
+            ],
+            "configMfe": "simple-mfe-config",
+            "params": [
+                {
+                    "name": "buttonlabel",
+                    "description": "my new button label"
+                }
+            ]
+        },
+        {
+            "name": "simple-mfe-config",
+            "customElement": "simple-mfe-config",
+            "stack": "react",
+            "type": "widget-config",
+            "group": "free",
+            "publicFolder": "public"
         }
-      ]
-    },
-    {
-      "name": "simple-mfe-config",
-      "customElement": "simple-mfe-config",
-      "stack": "react",
-      "type": "widget-config",
-      "group": "free",
-      "publicFolder": "public"
-    }
-  ],
-  "svc": [],
-  "name": "e71-spring-boot",
-  "version": "0.0.4",
-  "description": "e71-react-widget description",
-  "type": "bundle"
+    ],
+    "svc": [
+        "keycloak"
+    ],
+    "name": "e71-spring-boot",
+    "version": "0.0.5",
+    "description": "e71-react-widget description",
+    "type": "bundle"
 }

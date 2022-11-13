@@ -14,13 +14,22 @@ function App({config}) {
 
     async function callTheApi() {
         try {
-            const apiResponse = await fetch(url + API_PATH);
+            const token = window.entando.keycloak.token
+            let init = {}
+            if(token){
+                init = {
+                    headers:{
+                        Authorization: `Bearer ${token}`,
+                    }
+                }
+            }
+            const apiResponse = await fetch(url + API_PATH, init);
 
             if (apiResponse.ok) {
                 const apiJson = await apiResponse.json();
                 setPayload(<>{apiJson.payload}<br/></>);
             } else {
-                setPayload('Server responded with an error');
+                setPayload('Server responded with an error: ' + apiResponse.status);
             }
         } catch (error) {
             setPayload(error.message);
