@@ -7,9 +7,13 @@ The project contains a very simple MFE (simple-mfe) for Entando 7.3
 
 ## Build and publish steps  
 1. ent bundle pack 
-2. ent bundle publish
+2. ent bundle publish (push image on docker hub)
 3. ent bundle deploy
 4. ent bundle install
+
+how create CR from docker images
+
+ent bundle generate-cr --image=my-org/my-bundle
 
 See https://developer.entando.com for more information.
 
