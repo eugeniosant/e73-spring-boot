@@ -1,7 +1,7 @@
 {
     "microservices": [
         {
-            "name": "e71-spring-boot-ms",
+            "name": "e73-spring-boot-ms",
             "stack": "spring-boot",
             "healthCheckPath": "/api/health",
             "roles": ["role1"]
@@ -16,14 +16,14 @@
             "group": "free",
             "publicFolder": "public",
             "titles": {
-                "en": "E71 Simple MFE",
-                "it": "E71 Simple MFE"
+                "en": "E73 Simple MFE",
+                "it": "E73 Simple MFE"
             },
             "apiClaims": [
                 {
                     "name": "be-api",
                     "type": "internal",
-                    "serviceName": "e71-spring-boot-ms"
+                    "serviceName": "e73-spring-boot-ms"
                 }
             ],
             "configMfe": "simple-mfe-config",
@@ -46,8 +46,8 @@
     "svc": [
         "keycloak"
     ],
-    "name": "e71-spring-boot",
-    "version": "0.0.5",
-    "description": "e71-react-widget description",
+    "name": "e73-spring-boot",
+    "version": "0.0.1",
+    "description": "e73-react-widget description",
     "type": "bundle"
 }

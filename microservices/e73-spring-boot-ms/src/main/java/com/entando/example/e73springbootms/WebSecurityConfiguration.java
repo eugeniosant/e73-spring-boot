@@ -1,4 +1,4 @@
-package com.entando.example.e71springbootms;
+package com.entando.example.e73springbootms;
 
 import org.keycloak.adapters.KeycloakConfigResolver;
 import org.keycloak.adapters.springboot.KeycloakSpringBootConfigResolver;

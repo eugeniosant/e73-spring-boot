@@ -1,5 +1,5 @@
 # Configurable Widget
-The project contains a very simple MFE (simple-mfe) for Entando 7.1
+The project contains a very simple MFE (simple-mfe) for Entando 7.3
 
 ## Prerequisites
 1. Docker account

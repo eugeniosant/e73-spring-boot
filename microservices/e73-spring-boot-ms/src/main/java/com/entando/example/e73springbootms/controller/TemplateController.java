@@ -1,4 +1,4 @@
-package com.entando.example.e71springbootms.controller;
+package com.entando.example.e73springbootms.controller;
 import org.springframework.web.bind.annotation.*;
 import javax.annotation.security.RolesAllowed;
 @RestController

@@ -1,13 +1,13 @@
-package com.entando.example.e71springbootms;
+package com.entando.example.e73springbootms;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class E71SpringBootMsApplication {
+public class E73SpringBootMsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(E71SpringBootMsApplication.class, args);
+		SpringApplication.run(E73SpringBootMsApplication.class, args);
 	}
 
 }
