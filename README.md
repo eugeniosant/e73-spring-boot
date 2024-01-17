@@ -20,7 +20,7 @@ ent bundle generate-cr --image=my-org/my-bundle
 See https://developer.entando.com for more information.
 
 
-to enable redis integration add the following ENV variable into entando.json (or, after the installation into the deployment)
+to enable redis integration add the following ENV variables into entando.json (or, after the installation into the deployment)
 ```
             "env": [
                 {
